@@ -3,13 +3,13 @@ class DigitalClock {
     this.clockElement = clockElement;
   }
 
-  getCurrentTime() {
+  #getCurrentTime() {
     const now = new Date();
     return now.toLocaleTimeString();
   }
 
   updateClock() {
-    this.clockElement.textContent = this.getCurrentTime();
+    this.clockElement.textContent = this.#getCurrentTime();
   }
 
   start() {
